@@ -1,0 +1,14 @@
+create database sabarish;
+use sabarish;
+create table employees(Id int primary key , Name varchar(50), Age int,Department varchar(50),Salary decimal(10,2));
+insert into employees(Id,Name,Age,Department,Salary) values(1,"Arun",28,"HR",30000),(2,"Bala",24,"IT",45000),(3,"Charan",30,"Finance",50000),(4,"Anitha",26,"IT",42000),(5,"Divya",23,"HR",28000),(6,"Eshwar",35,"Finance",60000),(7,"Ajay",29,"IT",38000),(8,"Kiran",22,"Marketing",25000),(9,"Meena",31,"HR",52000),(10,"Aravind",27,"Finance",47000);
+select * from employees;
+select Name, Salary from employees; 
+select*from employees where Department ="HR";
+select*from employees where Salary>=30000; 
+select*from employees order by Salary asc; 
+select*from employees order by Salary desc;
+select*from employees order by Age asc;
+select*from employees order by Department asc;
+set sql_safe_updates =0;
+update employees set Department = "Business" where ID = 3;
